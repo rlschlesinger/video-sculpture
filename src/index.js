@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Main from './Main';
 import * as serviceWorker from './serviceWorker';
+
+// import react router
+import { BrowserRouter, Route } from 'react-router-dom'
+
+const App = () => (
+<BrowserRouter>
+    <div className="sans-serif">
+      <Route path="/" component={Main} />
+    </div>
+  </BrowserRouter>
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -11,7 +11,7 @@ const App = () => (
   <BrowserRouter>
     <div>
       <Route path="/" exact component={Main} />
-      <Route path="/screen:playlist" exact component={Screen} />
+      <Route path="/screen/:playlist" exact component={Screen} />
     </div>
   </BrowserRouter>
 );

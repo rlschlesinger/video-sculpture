@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import VideoPlayer from './VideoPlayer';
+import playlists from '../playlist';
 import './Screen.css';
 
 class Screen extends Component {
 	static propTypes = {
-		name: PropTypes.string.isRequired,
+		match: PropTypes.shape({
+			params: PropTypes.shape({
+				playlist: PropTypes.string.isRequired,
+			}).isRequired,
+		}).isRequired,
 	}
 	
 	constructor(props) {
@@ -21,12 +26,7 @@ class Screen extends Component {
 	render() {
 		return (
 			<div className="Screen">
-				<VideoPlayer
-					videos={[
-						'http://clips.vorwaerts-gmbh.de/VfE_html5.mp4',
-						'http://html5doctor.com/demos/video-canvas-magic/video.mp4',
-					]}
-				/>
+				<VideoPlayer videos={playlists[this.props.match.params.playlist]} />
 			</div>
 		);
 	}

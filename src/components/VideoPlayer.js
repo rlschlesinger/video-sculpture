@@ -30,7 +30,11 @@ export default class VideoPlayer extends Component {
 	
 	render() {
 		return (
-			<video controls autoPlay ref={this.video} />
+			<div>
+				<video controls autoPlay id="myVideo" ref={this.video}>
+				</video>
+				<div className="content"></div>
+			</div>
 		);
 	}
 }

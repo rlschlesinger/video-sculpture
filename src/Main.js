@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ScreenList from './ScreenList';
-import Screen from './Screen';
+import Screen from './components/Screen';
 import './Main.css';
 
 const Main = () => {
